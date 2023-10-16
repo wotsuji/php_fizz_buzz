@@ -10,7 +10,7 @@ $TARGET_ARRAY = [
 ];
 // HIT無しの時の出力テキスト
 $SKIP_TEXT = "-";
-// 1～Limit +1 ずつする
+// 1～Limit
 $LIMIT = 100;
 
 $fizzbuzz = new FizzBuzz();
