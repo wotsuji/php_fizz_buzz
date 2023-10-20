@@ -32,14 +32,20 @@ class FizzBuzz
 
     private function fizzBuzzOutputLine($target_array, $skip_text, $check_int)
     {
+        $output_line = $this->fizzBuzzOutputLineVals($target_array, $check_int);
+        if ($output_line == "") {
+            $output_line = $skip_text;
+        }
+        return $output_line;
+    }
+    
+    private function fizzBuzzOutputLineVals($target_array, $check_int)
+    {
         $output_line = "";
         foreach ($target_array as $vals) {
             if ($check_int % $vals[0] == 0) {
                 $output_line .= $vals[1];
             }
-        }
-        if ($output_line == "") {
-            $output_line = $skip_text;
         }
         return $output_line;
     }
